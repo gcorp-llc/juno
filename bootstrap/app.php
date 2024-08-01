@@ -11,7 +11,13 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
-        //
+        $middleware->alias([
+            'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
+            'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
+            'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
+            'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
+            'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
         //
