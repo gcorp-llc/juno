@@ -1,0 +1,21 @@
+<?php
+
+namespace App\Filament\Resources\ColleagueResource\Pages;
+
+use App\Filament\Resources\ColleagueResource;
+use Filament\Actions;
+use Filament\Resources\Pages\ListRecords;
+use Filament\Resources\Pages\ManageRecords;
+
+class ListColleagues extends ListRecords
+{
+    protected static string $resource = ColleagueResource::class;
+    use ManageRecords\Concerns\Translatable;
+    protected function getHeaderActions(): array
+    {
+        return [
+            Actions\CreateAction::make(),
+            Actions\LocaleSwitcher::make(),
+        ];
+    }
+}
