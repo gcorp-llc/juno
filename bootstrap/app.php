@@ -12,6 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->alias([
+            "localisation"=> \App\Http\Middleware\LocalisationMiddleware::class,
             'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,
             'OpenGraph'     => Artesaos\SEOTools\Facades\OpenGraph::class,
             'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,

@@ -1,16 +1,20 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 
-Route::group(['middleware' => 'localisation:ar', 'prefix' => 'ar'], function () {
-    include 'route.php';
+Route::get('/', function () {
+    return view('welcome');
 });
-Route::group(['middleware' => 'localisation:fa', 'prefix' => 'fa'], function () {
-    include 'route.php';
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth', 'verified'])->name('dashboard');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
-Route::group(['middleware' => 'localisation:en', 'prefix' => 'en'], function () {
-    include 'route.php';
-});
-Route::group(['middleware' => 'localisation'], function () {
-    include 'route.php';
-});
+
+require __DIR__.'/auth.php';
