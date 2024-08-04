@@ -18,6 +18,7 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Jeffgreco13\FilamentBreezy\BreezyCore;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 
 class AdminPanelProvider extends PanelProvider
@@ -41,10 +42,17 @@ class AdminPanelProvider extends PanelProvider
                     ->pluralLabel('Media')
                     ->navigationIcon('heroicon-o-photo')
                     ->navigationSort(2)
-                    ->navigationCountBadge()
-                    ->defaultListView('grid' || 'list'),
+                    ->navigationCountBadge(),
+                BreezyCore::make()
+                    ->myProfile(
+                        shouldRegisterUserMenu: true,
+                        shouldRegisterNavigation:false,
+//                        navigationGroup: 'Settings',
+                        hasAvatars: true,
+                        slug: 'my-profile'
+                    ),
                 SpatieLaravelTranslatablePlugin::make()
-                    ->defaultLocales(['fa', 'ar',"en"]),
+                    ->defaultLocales(['fa', 'ar', "en"]),
             ])
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
             ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')

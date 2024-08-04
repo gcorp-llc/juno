@@ -1,4 +1,5 @@
 <div class="shadow-3 ">
+    <!-- Swiper -->
     <div class="carousel carousel-start w-full h-[330px]  md:h-[500px]">
         @foreach($banners as $banner)
             <div id="slide1-{{$banner->id}}" class="carousel-item relative w-full glass">
@@ -33,10 +34,6 @@
                         @break
 
                 @endswitch
-                {{--                    <div class="absolute left-5 right-5 top-1/2 flex -translate-y-1/2 transform justify-between">--}}
-                {{--                        <a href="#slide-{{$banner->id +1}}" class="btn btn-circle">❮</a>--}}
-                {{--                        <a href="#slide-{{$banner->id -1}}" class="btn btn-circle">❯</a>--}}
-                {{--                    </div>--}}
             </div>
         @endforeach
 
