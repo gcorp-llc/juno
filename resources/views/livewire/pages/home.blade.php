@@ -1,6 +1,7 @@
 <div>
 
-    <livewire:components.banners/>
+    @if($settings->pc_banner) <livewire:components.banners/>@endif
+
     <livewire:components.info/>
     <livewire:components.services/>
     <livewire:components.comments/>

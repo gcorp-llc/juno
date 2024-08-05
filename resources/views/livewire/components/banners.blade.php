@@ -1,41 +1,37 @@
 <div class="shadow-3 ">
     <!-- Swiper -->
-    <div class="carousel carousel-start w-full h-[330px]  md:h-[500px]">
-        @foreach($banners as $banner)
-            <div id="slide1-{{$banner->id}}" class="carousel-item relative w-full glass">
+    <div class="carousel carousel-start w-full h-[300px]  md:h-[500px]">
+            <div id="slide1" class="carousel-item relative w-full glass">
                 @switch(app()->getLocale())
 
                     @case("ar")
-
-                        <img src="{{Storage::url($banner->ar_pc_cover?$banner->ar_pc_cover:$banner->fa_pc_cover)}}"
+                        <img src="{{Storage::url($settings->pc_banner_ar?$settings->pc_banner_ar:$settings->pc_banner)}}"
                              class="md:flex hidden  w-full glass"
-                             alt="{{$banner->title}}">
-                        <img src="{{Storage::url($banner->ar_mb_cover?$banner->ar_mb_cover:$banner->fa_mb_cover)}}"
+                             alt="{{$settings->title}}">
+                        <img src="{{Storage::url($settings->mb_banner_ar?$settings->mb_banner_ar:$settings->mb_banner)}}"
                              class="flex md:hidden w-full glass"
-                             alt="{{$banner->title}}">
+                             alt="{{$settings->site_name}}">
 
                         @break
                     @case("en")
-                        <img src="{{Storage::url($banner->en_pc_cover?$banner->en_pc_cover:$banner->fa_pc_cover)}}"
+                        <img src="{{Storage::url($settings->pc_banner_en?$settings->pc_banner_en:$settings->pc_banner)}}"
                              class="md:flex hidden  w-full glass"
-                             alt="{{$banner->title}}">
-                        <img src="{{Storage::url($banner->en_mb_cover?$banner->en_mb_cover:$banner->fa_mb_cover)}}"
+                             alt="{{$settings->site_name}}">
+                        <img src="{{Storage::url($settings->mb_banner_en?$settings->mb_banner_en:$settings->mb_banner)}}"
                              class="flex md:hidden w-full glass"
-                             alt="{{$banner->title}}">
+                             alt="{{$settings->site_name}}">
                         @break
                     @default
 
-                        <img src="{{Storage::url($banner->fa_pc_cover)}}"
+                        <img src="{{Storage::url($settings->pc_banner)}}"
                              class="md:flex hidden  w-full glass"
-                             alt="{{$banner->title}}">
-                        <img src="{{Storage::url($banner->fa_mb_cover)}}"
+                             alt="{{$settings->site_name}}">
+                        <img src="{{Storage::url($settings->mb_banner)}}"
                              class="flex md:hidden w-full glass"
-                             alt="{{$banner->title}}">
+                             alt="{{$settings->site_name}}">
                         @break
 
                 @endswitch
             </div>
-        @endforeach
-
     </div>
 </div>
