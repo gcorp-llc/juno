@@ -4,84 +4,88 @@
             <img src="{{ asset('favicon.png') }}" class="h-8" alt="GCORP LLC">
         </a>
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+            @if($settings->locales)
+                <div class="dropdown dropdown-bottom dropdown-left hidden lg:flex">
 
-            <div class="dropdown dropdown-bottom dropdown-left hidden lg:flex">
+                    <div tabindex="0" role="button"
+                         class="btn btn-ghost text-white">
+                        {{ str()->upper(app()->getLocale()) }}</div>
+                    <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
+                        @if (app()->getLocale() != 'fa')
+                            <li wire:click="locale('fa')" class="hover:bg-blue-800">
+                                <a href="#"
+                                   class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">فارسی</a>
+                            </li>
+                        @endif
+                        @if (app()->getLocale() != 'en')
+                            <li wire:click="locale('en')">
+                                <a href="#"
+                                   class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
+                            </li>
+                        @endif
 
-                <div tabindex="0" role="button"
-                     class="btn btn-ghost text-white">
-                    {{ str()->upper(app()->getLocale()) }}</div>
-                <ul tabindex="0" class="dropdown-content menu bg-base-200 rounded-box z-[1] w-52 p-2 shadow">
-                    @if (app()->getLocale() != 'fa')
-                        <li wire:click="locale('fa')" class="hover:bg-blue-800">
-                            <a href="#"
-                               class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">فارسی</a>
-                        </li>
-                    @endif
-                    @if (app()->getLocale() != 'en')
-                        <li wire:click="locale('en')">
-                            <a href="#"
-                               class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">English</a>
-                        </li>
-                    @endif
+                        @if (app()->getLocale() != 'ar')
+                            <li wire:click="locale('ar')">
+                                <a href="#"
+                                   class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">العربی</a>
+                            </li>
+                        @endif
+                    </ul>
 
-                    @if (app()->getLocale() != 'ar')
-                        <li wire:click="locale('ar')">
-                            <a href="#"
-                               class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">العربی</a>
-                        </li>
-                    @endif
-                </ul>
+                </div>
+            @endif
+            @if($settings->tune)
+                <a href="{{ route('tune') }}" wire:navigate
+                   class="hidden lg:flex btn btn-primary hover:btn-secondary ">
+                    {{ __('Get Turn') }}
+                </a>
+            @endif
+            @if($settings->auth)
+                @auth()
+                    <div class="hidden lg:flex dropdown dropdown-bottom dropdown-left">
+                        <div tabindex="0" role="button" class="btn btn-ghost mx-2">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
+                                 xmlns="http://www.w3.org/2000/svg"
+                                 width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
+                                <path fill-rule="evenodd"
+                                      d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
+                                      clip-rule="evenodd"/>
+                            </svg>
 
-            </div>
-            <a href="{{ route('tune') }}" wire:navigate
-               class="hidden lg:flex btn btn-primary hover:btn-secondary ">
-                {{ __('Get Turn') }}
-            </a>
-
-            @auth()
-                <div class="hidden lg:flex dropdown dropdown-bottom dropdown-left">
-                    <div tabindex="0" role="button" class="btn btn-ghost mx-2">
-                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true"
-                             xmlns="http://www.w3.org/2000/svg"
-                             width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
-                            <path fill-rule="evenodd"
-                                  d="M12 4a4 4 0 1 0 0 8 4 4 0 0 0 0-8Zm-2 9a4 4 0 0 0-4 4v1a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-1a4 4 0 0 0-4-4h-4Z"
-                                  clip-rule="evenodd"/>
-                        </svg>
-
+                        </div>
+                        <ul tabindex="0" class="menu dropdown-content  bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <li>
+                                <a class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white"
+                                   href="{{route('profile.edit')}}" wire:navigate>
+                                    {{ __('Profile') }}
+                                </a>
+                            </li>
+                            <li>
+                                <button wire:click="logout"
+                                        class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">
+                                    {{ __('Log Out') }}
+                                </button>
+                            </li>
+                        </ul>
                     </div>
-                    <ul tabindex="0" class="menu dropdown-content  bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li>
-                            <a class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white"
-                               href="{{route('profile.edit')}}" wire:navigate>
-                                {{ __('Profile') }}
-                            </a>
-                        </li>
-                        <li>
-                            <button wire:click="logout"
-                                    class="block text-center px-4 py-2 hover:bg-slate-500 dark:hover:bg-gray-600 dark:hover:text-white">
-                                {{ __('Log Out') }}
-                            </button>
-                        </li>
-                    </ul>
-                </div>
 
-            @else
-                <div class="hidden lg:flex dropdown dropdown-bottom dropdown-left">
-                    <summary class="btn btn-ghost mx-2"> {{ __('Log in') }}</summary>
-                    <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
-                        <li>
-                            <a href="{{ route('login') }}" wire:navigate
-                               class="block text-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Log in') }}</a>
-                        </li>
-                        <li>
-                            <a href="{{ route('register') }}" wire:navigate
-                               class="block text-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Register') }}</a>
+                @else
+                    <div class="hidden lg:flex dropdown dropdown-bottom dropdown-left">
+                        <summary class="btn btn-ghost mx-2"> {{ __('Log in') }}</summary>
+                        <ul class="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+                            <li>
+                                <a href="{{ route('login') }}" wire:navigate
+                                   class="block text-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Log in') }}</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('register') }}" wire:navigate
+                                   class="block text-center px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">{{ __('Register') }}</a>
 
-                        </li>
-                    </ul>
-                </div>
-            @endauth
+                            </li>
+                        </ul>
+                    </div>
+                @endauth
+            @endif
 
 
             <div class="drawer drawer-start lg:hidden ">
