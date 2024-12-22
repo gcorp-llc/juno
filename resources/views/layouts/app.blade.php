@@ -8,6 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <!-- MINIFIED -->
     {!! SEO::generate(true) !!}
+    @filamentPWA
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -17,6 +18,7 @@
     {{ $slot }}
 </main>
 <livewire:components.footer/>
+
 </body>
 
 </html>

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'HUOM!: :application_name varmuuskopiot ovat vialliset',
     'unhealthy_backup_found_subject_title' => 'HUOM!: :application_name varmuuskopiot ovat vialliset. :problem',
     'unhealthy_backup_found_body' => ':application_name varmuuskopiot levyllä :disk_name ovat vialliset.',
-    'unhealthy_backup_found_not_reachable' => 'Varmuuskopioiden kohdekansio ei ole saatavilla. :error',
+    'unhealthy_backup_found_not_reachable' => 'Varmuuskopioiden kohdekansio ei ole saatavilla. :errors',
     'unhealthy_backup_found_empty' => 'Tästä sovelluksesta ei ole varmuuskopioita.',
     'unhealthy_backup_found_old' => 'Viimeisin varmuuskopio, luotu :date, on liian vanha.',
     'unhealthy_backup_found_unknown' => 'Virhe, tarkempaa tietoa syystä ei valitettavasti ole saatavilla.',

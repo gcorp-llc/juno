@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Belangrijk: De back-ups voor :application_name zijn niet meer gezond',
     'unhealthy_backup_found_subject_title' => 'Belangrijk: De back-ups voor :application_name zijn niet gezond. :problem',
     'unhealthy_backup_found_body' => 'De back-ups voor :application_name op schijf :disk_name zijn niet gezond.',
-    'unhealthy_backup_found_not_reachable' => 'De back-upbestemming kon niet worden bereikt. :error',
+    'unhealthy_backup_found_not_reachable' => 'De back-upbestemming kon niet worden bereikt. :errors',
     'unhealthy_backup_found_empty' => 'Er zijn geen back-ups van deze applicatie beschikbaar.',
     'unhealthy_backup_found_old' => 'De laatste back-up gemaakt op :date is te oud.',
     'unhealthy_backup_found_unknown' => 'Sorry, een exacte reden kon niet worden bepaald.',

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'مهم: النسخ الاحتياطية ل :application_name غير صحية',
     'unhealthy_backup_found_subject_title' => 'مهم: النسخ الاحتياطية ل :application_name غير صحية. :problem',
     'unhealthy_backup_found_body' => 'النسخ الاحتياطية ل :application_name على القرص :disk_name غير صحية.',
-    'unhealthy_backup_found_not_reachable' => 'لا يمكن الوصول إلى وجهة النسخ الاحتياطي. :error',
+    'unhealthy_backup_found_not_reachable' => 'لا يمكن الوصول إلى وجهة النسخ الاحتياطي. :errors',
     'unhealthy_backup_found_empty' => 'لا توجد نسخ احتياطية لهذا التطبيق على الإطلاق.',
     'unhealthy_backup_found_old' => 'تم إنشاء أحدث النسخ الاحتياطية في :date وتعتبر قديمة جدا.',
     'unhealthy_backup_found_unknown' => 'عذرا، لا يمكن تحديد سبب دقيق.',

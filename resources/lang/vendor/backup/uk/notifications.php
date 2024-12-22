@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Увага: резервна копія :application_name не установилась',
     'unhealthy_backup_found_subject_title' => 'Увага: резервна копія для :application_name не установилась. :problem',
     'unhealthy_backup_found_body' => 'Резервна копія для :application_name на диску :disk_name не установилась.',
-    'unhealthy_backup_found_not_reachable' => 'Резервна копія не змогла установитись. :error',
+    'unhealthy_backup_found_not_reachable' => 'Резервна копія не змогла установитись. :errors',
     'unhealthy_backup_found_empty' => 'Резервні копії для цього додатку відсутні.',
     'unhealthy_backup_found_old' => 'Останнє резервне копіювання створено :date є застарілим.',
     'unhealthy_backup_found_unknown' => 'Вибачте, але ми не змогли визначити точну причину.',

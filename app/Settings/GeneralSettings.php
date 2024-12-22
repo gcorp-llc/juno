@@ -19,7 +19,7 @@ class GeneralSettings extends Settings
 
     public ?string $google_tag_manager_id,$seo_tags;
 
-    public ?string $merchantID;
+    public ?string $merchantID,$enamad;
     public ?bool $zarinGate, $sandbox;
 
     public ?string $user, $password, $number;

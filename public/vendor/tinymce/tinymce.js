@@ -19969,7 +19969,7 @@
           progress(e.loaded / e.total * 100);
         };
         xhr.onerror = () => {
-          failure('Image upload failed due to a XHR Transport error. Code: ' + xhr.status);
+          failure('Image upload failed due to a XHR Transport errors. Code: ' + xhr.status);
         };
         xhr.onload = () => {
           if (xhr.status < 200 || xhr.status >= 300) {

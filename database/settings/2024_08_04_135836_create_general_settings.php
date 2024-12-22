@@ -53,6 +53,7 @@ return new class extends SettingsMigration
         $this->migrator->add('general.seo_tags',null);
 
         $this->migrator->add('general.merchantID',null);
+        $this->migrator->add('general.enamad',null);
         $this->migrator->add('general.zarinGate',null);
         $this->migrator->add('general.sandbox',null);
 

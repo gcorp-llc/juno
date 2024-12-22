@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Ważne: Kopie zapasowe aplikacji :application_name są niepoprawne',
     'unhealthy_backup_found_subject_title' => 'Ważne: Kopie zapasowe aplikacji :application_name są niepoprawne. :problem',
     'unhealthy_backup_found_body' => 'Kopie zapasowe aplikacji :application_name na dysku :disk_name są niepoprawne.',
-    'unhealthy_backup_found_not_reachable' => 'Miejsce docelowe kopii zapasowej nie jest osiągalne. :error',
+    'unhealthy_backup_found_not_reachable' => 'Miejsce docelowe kopii zapasowej nie jest osiągalne. :errors',
     'unhealthy_backup_found_empty' => 'W aplikacji nie ma żadnej kopii zapasowych tej aplikacji.',
     'unhealthy_backup_found_old' => 'Ostatnia kopia zapasowa wykonania dnia :date jest zbyt stara.',
     'unhealthy_backup_found_unknown' => 'Niestety, nie można ustalić dokładnego błędu.',

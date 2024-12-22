@@ -258,6 +258,9 @@ class Setting extends SettingsPage
                                             ->inline(false)
                                             ->onIcon('heroicon-o-light-bulb')
                                             ->offIcon('heroicon-s-light-bulb'),
+                                        Textarea::make('enamad')
+                                        ->label("Enamad Code")
+                                        ->columnSpanFull()
                                     ])->columns(3)
                             ]),
                         Tabs\Tab::make('Sms')

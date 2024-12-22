@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'গুরুত্বপূর্ণঃ :application_name এর ব্যাকআপগুলি অস্বাস্থ্যকর অবস্থায় আছে।',
     'unhealthy_backup_found_subject_title' => 'গুরুত্বপূর্ণঃ :application_name এর ব্যাকআপগুলি অস্বাস্থ্যকর অবস্থায় আছে। :problem',
     'unhealthy_backup_found_body' => ':disk_name ডিস্কের :application_name এর ব্যাকআপগুলি অস্বাস্থ্যকর অবস্থায় আছে।',
-    'unhealthy_backup_found_not_reachable' => 'ব্যাকআপ গন্তব্যে পৌঁছানো যায় নি। :error',
+    'unhealthy_backup_found_not_reachable' => 'ব্যাকআপ গন্তব্যে পৌঁছানো যায় নি। :errors',
     'unhealthy_backup_found_empty' => 'এই অ্যাপ্লিকেশনটির কোনও ব্যাকআপ নেই।',
     'unhealthy_backup_found_old' => 'সর্বশেষ ব্যাকআপ যেটি :date এই তারিখে করা হয়েছে, সেটি খুব পুরানো।',
     'unhealthy_backup_found_unknown' => 'দুঃখিত, সঠিক কারণ নির্ধারণ করা সম্ভব হয়নি।',

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => '重要: :application_name のバックアップに異常があります。',
     'unhealthy_backup_found_subject_title' => '重要: :application_name のバックアップに異常があります。 :problem',
     'unhealthy_backup_found_body' => ':disk_name への :application_name のバックアップに異常があります。',
-    'unhealthy_backup_found_not_reachable' => 'バックアップ先にアクセスできませんでした。 :error',
+    'unhealthy_backup_found_not_reachable' => 'バックアップ先にアクセスできませんでした。 :errors',
     'unhealthy_backup_found_empty' => 'このアプリケーションのバックアップは見つかりませんでした。',
     'unhealthy_backup_found_old' => ':date に保存された直近のバックアップが古すぎます。',
     'unhealthy_backup_found_unknown' => '申し訳ございません。予期せぬエラーです。',

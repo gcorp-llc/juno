@@ -39,7 +39,7 @@ class ContactResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Toggle::make('show_comments')
+                Forms\Components\Toggle::make('accept')
                     ->required(),
                 Forms\Components\Textarea::make('name')
                     ->required()

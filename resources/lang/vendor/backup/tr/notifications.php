@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Önemli: :application_name için yedeklemeler sağlıksız',
     'unhealthy_backup_found_subject_title' => 'Önemli: :application_name için yedeklemeler sağlıksız. :problem',
     'unhealthy_backup_found_body' => 'Yedeklemeler: :application_name disk: :disk_name sağlıksız.',
-    'unhealthy_backup_found_not_reachable' => 'Yedekleme hedefine ulaşılamıyor. :error',
+    'unhealthy_backup_found_not_reachable' => 'Yedekleme hedefine ulaşılamıyor. :errors',
     'unhealthy_backup_found_empty' => 'Bu uygulamanın yedekleri yok.',
     'unhealthy_backup_found_old' => ':date tarihinde yapılan en son yedekleme çok eski kabul ediliyor.',
     'unhealthy_backup_found_unknown' => 'Üzgünüm, kesin bir sebep belirlenemiyor.',

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => '重要說明：:application_name 的備份不健康',
     'unhealthy_backup_found_subject_title' => '重要說明：:application_name 備份不健康。 :problem',
     'unhealthy_backup_found_body' => ':disk_name 磁碟上 :application_name 的備份不健康。',
-    'unhealthy_backup_found_not_reachable' => '無法訪問備份目標。 :error',
+    'unhealthy_backup_found_not_reachable' => '無法訪問備份目標。 :errors',
     'unhealthy_backup_found_empty' => '根本沒有此應用程序的備份。',
     'unhealthy_backup_found_old' => '最近的備份創建於 :date ，太舊了。',
     'unhealthy_backup_found_unknown' => '對不起，確切原因無法確定。',

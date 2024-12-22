@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Importante: i backup per :application_name sono corrotti',
     'unhealthy_backup_found_subject_title' => 'Importante: i backup per :application_name sono corrotti. :problem',
     'unhealthy_backup_found_body' => 'I backup per :application_name sul disco :disk_name sono corrotti.',
-    'unhealthy_backup_found_not_reachable' => 'Impossibile raggiungere la destinazione di backup. :error',
+    'unhealthy_backup_found_not_reachable' => 'Impossibile raggiungere la destinazione di backup. :errors',
     'unhealthy_backup_found_empty' => 'Non esiste alcun backup di questa applicazione.',
     'unhealthy_backup_found_old' => 'L\'ultimo backup fatto il :date è considerato troppo vecchio.',
     'unhealthy_backup_found_unknown' => 'Spiacenti, non è possibile determinare una ragione esatta.',

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Důležité: Zálohy pro :application_name jsou nezdravé',
     'unhealthy_backup_found_subject_title' => 'Důležité: Zálohy pro :application_name jsou nezdravé. :problem',
     'unhealthy_backup_found_body' => 'Zálohy pro :application_name na disku :disk_name jsou nezdravé.',
-    'unhealthy_backup_found_not_reachable' => 'Nelze se dostat k cíli zálohy. :error',
+    'unhealthy_backup_found_not_reachable' => 'Nelze se dostat k cíli zálohy. :errors',
     'unhealthy_backup_found_empty' => 'Tato aplikace nemá vůbec žádné zálohy.',
     'unhealthy_backup_found_old' => 'Poslední záloha vytvořená dne :date je považována za příliš starou.',
     'unhealthy_backup_found_unknown' => 'Omlouváme se, nemůžeme určit přesný důvod.',

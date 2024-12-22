@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Važno: Sigurnosne kopije za :application_name su nezdrave',
     'unhealthy_backup_found_subject_title' => 'Važno: Sigurnosne kopije za :application_name su nezdrave. :problem',
     'unhealthy_backup_found_body' => 'Sigurnosne kopije za :application_name na disku :disk_name su nezdrave.',
-    'unhealthy_backup_found_not_reachable' => 'Destinacija sigurnosne kopije nije dohvatljiva. :error',
+    'unhealthy_backup_found_not_reachable' => 'Destinacija sigurnosne kopije nije dohvatljiva. :errors',
     'unhealthy_backup_found_empty' => 'Nijedna sigurnosna kopija ove aplikacije ne postoji.',
     'unhealthy_backup_found_old' => 'Zadnja sigurnosna kopija generirana na datum :date smatra se prestarom.',
     'unhealthy_backup_found_unknown' => 'Isprike, ali nije moguće odrediti razlog.',

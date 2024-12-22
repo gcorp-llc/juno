@@ -1,4 +1,6 @@
-<div class="bg-base-200 py-5 px-3">
+<div class="bg-base-100  px-3 py-16" data-aos="fade-down"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
     <div class="grid md:grid-cols-2 grid-cols-1 gap-2">
 
         <div class="hero h-[300px] rounded-2xl shadow-lg" style="background-image: url(https://img.daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.webp);">
@@ -15,22 +17,22 @@
             </div>
         </div>
 
-        <div class="">
-            <div class="collapse collapse-arrow bg-base-200">
+        <div class="m-3">
+            <div class="collapse collapse-arrow m-3 bg-base-200">
                 <input type="radio" name="my-accordion-2" checked="checked"/>
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">
                     <p>hello</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow m-3 bg-base-200">
                 <input type="radio" name="my-accordion-2"/>
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">
                     <p>hello</p>
                 </div>
             </div>
-            <div class="collapse collapse-arrow bg-base-200">
+            <div class="collapse collapse-arrow m-3 bg-base-200">
                 <input type="radio" name="my-accordion-2"/>
                 <div class="collapse-title text-xl font-medium">Click to open this one and close others</div>
                 <div class="collapse-content">

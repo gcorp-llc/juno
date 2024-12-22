@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Important : Les sauvegardes pour :application_name sont corrompues',
     'unhealthy_backup_found_subject_title' => 'Important : Les sauvegardes pour :application_name sont corrompues. :problem',
     'unhealthy_backup_found_body' => 'Les sauvegardes pour :application_name sur le disque :disk_name sont corrompues.',
-    'unhealthy_backup_found_not_reachable' => 'La destination de la sauvegarde n\'est pas accessible. :error',
+    'unhealthy_backup_found_not_reachable' => 'La destination de la sauvegarde n\'est pas accessible. :errors',
     'unhealthy_backup_found_empty' => 'Il n\'y a aucune sauvegarde pour cette application.',
     'unhealthy_backup_found_old' => 'La dernière sauvegarde du :date est considérée trop vieille.',
     'unhealthy_backup_found_unknown' => 'Désolé, une raison exacte ne peut être déterminée.',

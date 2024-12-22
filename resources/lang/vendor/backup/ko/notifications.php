@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => '중요: :application_name 백업에 문제가 있습니다.',
     'unhealthy_backup_found_subject_title' => '중요: :application_name 백업에 문제가 있습니다. :problem',
     'unhealthy_backup_found_body' => ':disk_name 디스크에 :application_name 백업에 문제가 있습니다.',
-    'unhealthy_backup_found_not_reachable' => '백업 위치에 액세스할 수 없습니다. :error',
+    'unhealthy_backup_found_not_reachable' => '백업 위치에 액세스할 수 없습니다. :errors',
     'unhealthy_backup_found_empty' => '이 애플리케이션에는 백업이 없습니다.',
     'unhealthy_backup_found_old' => ':date에 저장된 최신 백업이 너무 오래되었습니다.',
     'unhealthy_backup_found_unknown' => '죄송합니다. 예기치 않은 오류가 발생했습니다.',

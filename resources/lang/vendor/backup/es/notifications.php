@@ -7,14 +7,14 @@ return [
     'exception_trace_title' => 'Traza de la excepción',
 
     'backup_failed_subject' => 'Copia de seguridad de :application_name fallida',
-    'backup_failed_body' => 'Importante: Ocurrió un error al realizar la copia de seguridad de :application_name',
+    'backup_failed_body' => 'Importante: Ocurrió un errors al realizar la copia de seguridad de :application_name',
 
     'backup_successful_subject' => 'Se completó con éxito la copia de seguridad de :application_name',
     'backup_successful_subject_title' => '¡Nueva copia de seguridad creada con éxito!',
     'backup_successful_body' => 'Buenas noticias, una nueva copia de seguridad de :application_name fue creada con éxito en el disco llamado :disk_name.',
 
     'cleanup_failed_subject' => 'La limpieza de copias de seguridad de :application_name falló.',
-    'cleanup_failed_body' => 'Ocurrió un error mientras se realizaba la limpieza de copias de seguridad de :application_name',
+    'cleanup_failed_body' => 'Ocurrió un errors mientras se realizaba la limpieza de copias de seguridad de :application_name',
 
     'cleanup_successful_subject' => 'La limpieza de copias de seguridad de :application_name se completó con éxito',
     'cleanup_successful_subject_title' => '!Limpieza de copias de seguridad completada con éxito!',
@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Importante: Las copias de seguridad de :application_name están en mal estado',
     'unhealthy_backup_found_subject_title' => 'Importante: Las copias de seguridad de :application_name están en mal estado. :problem',
     'unhealthy_backup_found_body' => 'Las copias de seguridad de :application_name en el disco :disk_name están en mal estado.',
-    'unhealthy_backup_found_not_reachable' => 'No se puede acceder al destino de la copia de seguridad. :error',
+    'unhealthy_backup_found_not_reachable' => 'No se puede acceder al destino de la copia de seguridad. :errors',
     'unhealthy_backup_found_empty' => 'No existe ninguna copia de seguridad de esta aplicación.',
     'unhealthy_backup_found_old' => 'La última copia de seguriad hecha en :date es demasiado antigua.',
     'unhealthy_backup_found_unknown' => 'Lo siento, no es posible determinar la razón exacta.',

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => '重要说明：:application_name 的备份不健康',
     'unhealthy_backup_found_subject_title' => '重要说明：:application_name 备份不健康。 :problem',
     'unhealthy_backup_found_body' => ':disk_name 磁盘上 :application_name 的备份不健康。',
-    'unhealthy_backup_found_not_reachable' => '无法访问备份目标。 :error',
+    'unhealthy_backup_found_not_reachable' => '无法访问备份目标。 :errors',
     'unhealthy_backup_found_empty' => '根本没有此应用程序的备份。',
     'unhealthy_backup_found_old' => '最近的备份创建于 :date ，太旧了。',
     'unhealthy_backup_found_unknown' => '对不起，确切原因无法确定。',

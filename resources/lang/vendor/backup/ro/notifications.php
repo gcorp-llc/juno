@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Important: Copiile de rezervă pentru :application_name nu sunt în regulă',
     'unhealthy_backup_found_subject_title' => 'Important: Copiile de rezervă pentru :application_name nu sunt în regulă. :problem',
     'unhealthy_backup_found_body' => 'Copiile de rezervă pentru :application_name de pe discul :disk_name nu sunt în regulă.',
-    'unhealthy_backup_found_not_reachable' => 'Nu se poate ajunge la destinația copiilor de rezervă. :error',
+    'unhealthy_backup_found_not_reachable' => 'Nu se poate ajunge la destinația copiilor de rezervă. :errors',
     'unhealthy_backup_found_empty' => 'Nu există copii de rezervă ale acestei aplicații.',
     'unhealthy_backup_found_old' => 'Cea mai recentă copie de rezervă făcută la :date este considerată prea veche.',
     'unhealthy_backup_found_unknown' => 'Ne pare rău, un motiv exact nu poate fi determinat.',

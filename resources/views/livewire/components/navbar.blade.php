@@ -3,6 +3,7 @@
         <a wire:navigate href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
             <img src="{{ asset('favicon.png') }}" class="h-8" alt="GCORP LLC">
         </a>
+
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
             @if($settings->locales)
                 <div class="dropdown dropdown-bottom dropdown-left hidden lg:flex">

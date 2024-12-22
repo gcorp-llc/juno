@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Внимание: резервные копии :application_name неисправны',
     'unhealthy_backup_found_subject_title' => 'Внимание: резервные копии для :application_name неисправны. :problem',
     'unhealthy_backup_found_body' => 'Резервные копии для :application_name на диске :disk_name неисправны.',
-    'unhealthy_backup_found_not_reachable' => 'Не удается достичь места назначения резервной копии. :error',
+    'unhealthy_backup_found_not_reachable' => 'Не удается достичь места назначения резервной копии. :errors',
     'unhealthy_backup_found_empty' => 'Резервные копии для этого приложения отсутствуют.',
     'unhealthy_backup_found_old' => 'Последнее резервное копирование созданное :date является устаревшим.',
     'unhealthy_backup_found_unknown' => 'Извините, точная причина не может быть определена.',

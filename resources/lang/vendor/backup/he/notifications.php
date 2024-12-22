@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'חשוב: הגיבויים של :application_name אינם תקינים',
     'unhealthy_backup_found_subject_title' => 'חשוב: הגיבויים של :application_name אינם תקינים. :problem',
     'unhealthy_backup_found_body' => 'הגיבויים של :application_name על הדיסק :disk_name אינם תקינים.',
-    'unhealthy_backup_found_not_reachable' => 'לא ניתן להגיע ליעד הגיבוי. :error',
+    'unhealthy_backup_found_not_reachable' => 'לא ניתן להגיע ליעד הגיבוי. :errors',
     'unhealthy_backup_found_empty' => 'אין גיבויים של היישום הזה בכלל.',
     'unhealthy_backup_found_old' => 'הגיבוי האחרון שנעשה בתאריך :date נחשב כישן מדי.',
     'unhealthy_backup_found_unknown' => 'מצטערים, לא ניתן לקבוע סיבה מדויקת.',

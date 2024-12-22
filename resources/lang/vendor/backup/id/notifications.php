@@ -7,14 +7,14 @@ return [
     'exception_trace_title' => 'Jejak pengecualian',
 
     'backup_failed_subject' => 'Gagal backup :application_name',
-    'backup_failed_body' => 'Penting: Sebuah error terjadi ketika membackup :application_name',
+    'backup_failed_body' => 'Penting: Sebuah errors terjadi ketika membackup :application_name',
 
     'backup_successful_subject' => 'Backup baru sukses dari :application_name',
     'backup_successful_subject_title' => 'Backup baru sukses!',
     'backup_successful_body' => 'Kabar baik, sebuah backup baru dari :application_name sukses dibuat pada disk bernama :disk_name.',
 
     'cleanup_failed_subject' => 'Membersihkan backup dari :application_name yang gagal.',
-    'cleanup_failed_body' => 'Sebuah error teradi ketika membersihkan backup dari :application_name',
+    'cleanup_failed_body' => 'Sebuah errors teradi ketika membersihkan backup dari :application_name',
 
     'cleanup_successful_subject' => 'Sukses membersihkan backup :application_name',
     'cleanup_successful_subject_title' => 'Sukses membersihkan backup!',
@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Penting: Backup untuk :application_name tidak sehat',
     'unhealthy_backup_found_subject_title' => 'Penting: Backup untuk :application_name tidak sehat. :problem',
     'unhealthy_backup_found_body' => 'Backup untuk :application_name pada disk :disk_name tidak sehat.',
-    'unhealthy_backup_found_not_reachable' => 'Tujuan backup tidak dapat terjangkau. :error',
+    'unhealthy_backup_found_not_reachable' => 'Tujuan backup tidak dapat terjangkau. :errors',
     'unhealthy_backup_found_empty' => 'Tidak ada backup pada aplikasi ini sama sekali.',
     'unhealthy_backup_found_old' => 'Backup terakhir dibuat pada :date dimana dipertimbahkan sudah sangat lama.',
     'unhealthy_backup_found_unknown' => 'Maaf, sebuah alasan persisnya tidak dapat ditentukan.',

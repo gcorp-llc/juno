@@ -14,7 +14,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        // ...existing code...
     }
 
     /**
@@ -22,10 +22,11 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(GeneralSettings $settings): void
     {
+        // ...existing code...
         View::share('settings', $settings);
         LanguageSwitch::configureUsing(function (LanguageSwitch $switch) {
             $switch
-                ->locales(['fa','ar','en']); // also accepts a closure
+                ->locales(['fa', 'ar', 'en']); // also accepts a closure
         });
     }
 }

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Importante: Os backups da aplicação :application_name não estão em dia',
     'unhealthy_backup_found_subject_title' => 'Importante: Os backups da aplicação :application_name não estão em dia. :problem',
     'unhealthy_backup_found_body' => 'Os backups da aplicação :application_name no disco :disk_name não estão em dia.',
-    'unhealthy_backup_found_not_reachable' => 'O destino dos backups não pode ser alcançado. :error',
+    'unhealthy_backup_found_not_reachable' => 'O destino dos backups não pode ser alcançado. :errors',
     'unhealthy_backup_found_empty' => 'Não existem backups para essa aplicação.',
     'unhealthy_backup_found_old' => 'O último backup realizado em :date é considerado muito antigo.',
     'unhealthy_backup_found_unknown' => 'Desculpe, a exata razão não pode ser encontrada.',

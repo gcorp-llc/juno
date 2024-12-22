@@ -1,9 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 .btn{
     @apply cursor-pointer !important;
 }
+
+
+@layer utilities {
+    .fade-up {
+      @apply opacity-0 translate-y-4 transition-all duration-['3000'] ease-in-out;
+    }
+    .fade-up.visible {
+      @apply opacity-100 translate-y-0;
+    }
+  }
+
+
+
 @layer base {
     html {
         font-family: 'Vazirmatn','Shabnam' ;

@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Wichtig: Die Backups für :application_name sind nicht gesund',
     'unhealthy_backup_found_subject_title' => 'Wichtig: Die Backups für :application_name sind ungesund. :problem',
     'unhealthy_backup_found_body' => 'Die Backups für :application_name in :disk_name sind ungesund.',
-    'unhealthy_backup_found_not_reachable' => 'Das Backup Ziel konnte nicht erreicht werden. :error',
+    'unhealthy_backup_found_not_reachable' => 'Das Backup Ziel konnte nicht erreicht werden. :errors',
     'unhealthy_backup_found_empty' => 'Es gibt für die Anwendung noch gar keine Backups.',
     'unhealthy_backup_found_old' => 'Das letzte Backup am :date ist zu lange her.',
     'unhealthy_backup_found_unknown' => 'Sorry, ein genauer Grund konnte nicht gefunden werden.',

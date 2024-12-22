@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'जरूरी सुचना :  :application_name के बैकअप अस्वस्थ है',
     'unhealthy_backup_found_subject_title' => 'जरूरी सुचना : :application_name के बैकअप :problem के बजेसे अस्वस्थ है',
     'unhealthy_backup_found_body' => ':disk_name नाम की डिस्क पर संग्रहित :application_name के बैकअप अस्वस्थ है',
-    'unhealthy_backup_found_not_reachable' => ':error के बजेसे बैकअप की मंजिल तक पोहोच नहीं सकते.',
+    'unhealthy_backup_found_not_reachable' => ':errors के बजेसे बैकअप की मंजिल तक पोहोच नहीं सकते.',
     'unhealthy_backup_found_empty' => 'इस एप्लीकेशन का कोई भी बैकअप नहीं है.',
     'unhealthy_backup_found_old' => 'हालहीमें :date को लिया हुआ बैकअप बहुत पुराना है.',
     'unhealthy_backup_found_unknown' => 'माफ़ कीजिये, सही कारण निर्धारित नहीं कर सकते.',

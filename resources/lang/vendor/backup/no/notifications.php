@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Viktig: Backups for :application_name ikke OK',
     'unhealthy_backup_found_subject_title' => 'Viktig: Backups for :application_name er ikke OK. :problem',
     'unhealthy_backup_found_body' => 'Backups for :application_name på disken :disk_name er ikke OK.',
-    'unhealthy_backup_found_not_reachable' => 'Kunne ikke finne backup-destinasjonen. :error',
+    'unhealthy_backup_found_not_reachable' => 'Kunne ikke finne backup-destinasjonen. :errors',
     'unhealthy_backup_found_empty' => 'Denne applikasjonen mangler backups.',
     'unhealthy_backup_found_old' => 'Den siste backupem fra :date er for gammel.',
     'unhealthy_backup_found_unknown' => 'Beklager, kunne ikke finne nøyaktig årsak.',

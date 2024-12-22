@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'Vigtigt: Backups for :application_name fejlbehæftede',
     'unhealthy_backup_found_subject_title' => 'Vigtigt: Backups for :application_name er fejlbehæftede. :problem',
     'unhealthy_backup_found_body' => 'Backups for :application_name på disken :disk_name er fejlbehæftede.',
-    'unhealthy_backup_found_not_reachable' => 'Backup destinationen kunne ikke findes. :error',
+    'unhealthy_backup_found_not_reachable' => 'Backup destinationen kunne ikke findes. :errors',
     'unhealthy_backup_found_empty' => 'Denne applikation har ingen backups overhovedet.',
     'unhealthy_backup_found_old' => 'Den seneste backup fra :date er for gammel.',
     'unhealthy_backup_found_unknown' => 'Beklager, en præcis årsag kunne ikke findes.',

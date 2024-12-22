@@ -11,6 +11,9 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware) {
+        $middleware->web([
+            \App\Http\Middleware\Maintenance::class,
+        ]);
         $middleware->alias([
             "localisation"=> \App\Http\Middleware\LocalisationMiddleware::class,
             'SEOMeta'       => Artesaos\SEOTools\Facades\SEOMeta::class,

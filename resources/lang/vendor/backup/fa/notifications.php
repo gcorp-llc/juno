@@ -27,7 +27,7 @@ return [
     'unhealthy_backup_found_subject' => 'خبر مهم: نسخه پشتیبان :application_name سالم نبود.',
     'unhealthy_backup_found_subject_title' => 'خبر مهم: نسخه پشتیبان :application_name سالم نبود. :problem',
     'unhealthy_backup_found_body' => 'نسخه پشتیبان :application_name روی دیسک :disk_name سالم نبود.',
-    'unhealthy_backup_found_not_reachable' => 'مقصد پشتیبان‌گیری در دسترس نبود. :error',
+    'unhealthy_backup_found_not_reachable' => 'مقصد پشتیبان‌گیری در دسترس نبود. :errors',
     'unhealthy_backup_found_empty' => 'برای این برنامه هیچ نسخه پشتیبانی وجود ندارد.',
     'unhealthy_backup_found_old' => 'آخرین نسخه پشتیبان برای تاریخ :date است، که به نظر خیلی قدیمی میاد. ',
     'unhealthy_backup_found_unknown' => 'متاسفانه دلیل دقیقی قابل تعیین نیست.',
