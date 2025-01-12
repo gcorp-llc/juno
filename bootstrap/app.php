@@ -12,7 +12,7 @@ return Application::configure(basePath: dirname(__DIR__))
     )
     ->withMiddleware(function (Middleware $middleware) {
         $middleware->web([
-            \App\Http\Middleware\Maintenance::class,
+
         ]);
         $middleware->alias([
             "localisation"=> \App\Http\Middleware\LocalisationMiddleware::class,

@@ -1,7 +1,7 @@
 <nav class="glass z-50 bg-violet-700  fixed w-full top-0 start-0 border-none shadow-2xl">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <a wire:navigate href="{{ route('home') }}" class="flex items-center space-x-3 rtl:space-x-reverse">
-            <img src="{{ asset('favicon.png') }}" class="h-8" alt="GCORP LLC">
+            <img src="{{Storage::url($settings->nav_icon)??""}}" class="h-8 rounded-2xl" alt="{{$settings->site_name}}">
         </a>
 
         <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">

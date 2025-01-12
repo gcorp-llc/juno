@@ -1,12 +1,13 @@
 <div>
-
     @if($settings->pc_banner)
-    <livewire:components.banners />
+        <livewire:components.banners/>
     @endif
-    <livewire:components.info />
-    <livewire:components.services />
-    <livewire:components.comments />
-    <livewire:components.posts />
-    <livewire:components.faq />
+    @if($settings->info)
+        <livewire:components.info/>
+    @endif
+    <livewire:components.services/>
+    <livewire:components.comments/>
+    <livewire:components.posts/>
+    <livewire:components.faq/>
 
 </div>

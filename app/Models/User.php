@@ -4,6 +4,7 @@ namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use BezhanSalleh\FilamentShield\Traits\HasPanelShield;
+
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Filament\Models\Contracts\FilamentUser;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -12,9 +13,15 @@ use Spatie\Permission\Traits\HasRoles;
 
 class User extends Authenticatable
 {
+
     use HasRoles ,HasPanelShield;
     use HasFactory, Notifiable;
 
+    public function canComment(): bool
+    {
+        // your conditional logic here
+        return true;
+    }
     /**
      * The attributes that are mass assignable.
      *

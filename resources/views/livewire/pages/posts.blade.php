@@ -65,25 +65,25 @@
 
                                 <div
                                     class="p-4 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100  dark:hover:bg-gray-700 hover:shadow-lg">
-                                    <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">
-                                        @if($item->cover)
-                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">
-                                                <img class="rounded-t-lg"
-                                                     src="{{Storage::url($item->cover)}}"
-                                                     alt="{{$item->title}}"/>
+{{--                                    <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
+{{--                                        @if($item->cover_photo_path)--}}
+{{--                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
+{{--                                                <img class="rounded-t-lg"--}}
+{{--                                                     src="{{Storage::url($item->cover_photo_path)}}"--}}
+{{--                                                     alt="{{$item->title}}"/>--}}
 
-                                            </a>
-                                        @endif
-                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">
-                                            <div class="">
-                                                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">{{$item->title}}</h5>
-                                                <p class="my-3 text-justify font-normal text-gray-700 dark:text-gray-400">{{Str::limit($item->info,190)}}</p>
-                                            </div>
-                                            </a>
+{{--                                            </a>--}}
+{{--                                        @endif--}}
+{{--                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
+{{--                                            <div class="">--}}
+{{--                                                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">{{$item->title}}</h5>--}}
+{{--                                                <p class="my-3 text-justify font-normal text-gray-700 dark:text-gray-400">{{Str::limit($item->sub_title,190)}}</p>--}}
+{{--                                            </div>--}}
+{{--                                            </a>--}}
 
 
 
-                                    </a>
+{{--                                    </a>--}}
 
                                     <ul class="flex flex-wrap mt-3  items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
                                                 <li>
@@ -128,7 +128,7 @@
                              data-aos-easing="linear"
                              data-aos-duration="1000">
                             <div class="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1203x503">
+                                <img alt="content" class="object-cover_photo_path object-center h-full w-full" src="https://dummyimage.com/1203x503">
                             </div>
                             <h2 class="text-xl font-medium title-font text-gray-900 mt-5">Shooting Stars</h2>
                             <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
@@ -142,7 +142,7 @@
                              data-aos-easing="linear"
                              data-aos-duration="1000">
                             <div class="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1204x504">
+                                <img alt="content" class="object-cover_photo_path object-center h-full w-full" src="https://dummyimage.com/1204x504">
                             </div>
                             <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The Catalyzer</h2>
                             <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>
@@ -156,7 +156,7 @@
                              data-aos-easing="linear"
                              data-aos-duration="1000">
                             <div class="rounded-lg h-64 overflow-hidden">
-                                <img alt="content" class="object-cover object-center h-full w-full" src="https://dummyimage.com/1205x505">
+                                <img alt="content" class="object-cover_photo_path object-center h-full w-full" src="https://dummyimage.com/1205x505">
                             </div>
                             <h2 class="text-xl font-medium title-font text-gray-900 mt-5">The 400 Blows</h2>
                             <p class="text-base leading-relaxed mt-2">Swag shoivdigoitch literally meditation subway tile tumblr cold-pressed. Gastropub street art beard dreamcatcher neutra, ethical XOXO lumbersexual.</p>

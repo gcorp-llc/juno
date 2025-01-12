@@ -32,38 +32,7 @@ class Setting extends SettingsPage
             ->schema([
                 Tabs::make('Tabs')
                     ->tabs([
-                        Tabs\Tab::make('Config')
-                            ->icon('heroicon-m-check-badge')
-                            ->schema([
 
-                                Section::make('Config base Site')
-                                    ->columns([
-                                        'defaults' => 2,
-                                        'sm' => 2,
-                                        'xl' => 4,
-                                    ])
-                                    ->description('Prevent abuse by limiting the number of requests per period')
-                                    ->schema([
-                                        Toggle::make('maintenance')
-                                            ->label('Website Maintenance')
-                                            ->onIcon('heroicon-o-light-bulb')
-                                            ->offIcon('heroicon-s-light-bulb'),
-                                        Toggle::make('auth')
-                                            ->label('Authentication')
-                                            ->onIcon('heroicon-o-light-bulb')
-                                            ->offIcon('heroicon-s-light-bulb'),
-                                        Toggle::make('locales')
-                                            ->label('Multi Language')
-                                            ->onIcon('heroicon-o-light-bulb')
-                                            ->offIcon('heroicon-s-light-bulb'),
-                                        Toggle::make('tune')
-                                            ->label('Tune System')
-                                            ->onIcon('heroicon-o-light-bulb')
-                                            ->offIcon('heroicon-s-light-bulb')
-
-                                    ]),
-
-                            ]),
                         Tabs\Tab::make('Information')
                             ->icon('heroicon-m-identification')
                             ->schema([
@@ -293,6 +262,38 @@ class Setting extends SettingsPage
                                             ->separator(',')
                                     ])
 
+
+                            ]),
+                        Tabs\Tab::make('Config')
+                            ->icon('heroicon-m-check-badge')
+                            ->schema([
+
+                                Section::make('Config base Site')
+                                    ->columns([
+                                        'defaults' => 2,
+                                        'sm' => 2,
+                                        'xl' => 4,
+                                    ])
+                                    ->description('Prevent abuse by limiting the number of requests per period')
+                                    ->schema([
+                                        Toggle::make('maintenance')
+                                            ->label('Website Maintenance')
+                                            ->onIcon('heroicon-o-light-bulb')
+                                            ->offIcon('heroicon-s-light-bulb'),
+                                        Toggle::make('auth')
+                                            ->label('Authentication')
+                                            ->onIcon('heroicon-o-light-bulb')
+                                            ->offIcon('heroicon-s-light-bulb'),
+                                        Toggle::make('locales')
+                                            ->label('Multi Language')
+                                            ->onIcon('heroicon-o-light-bulb')
+                                            ->offIcon('heroicon-s-light-bulb'),
+                                        Toggle::make('tune')
+                                            ->label('Tune System')
+                                            ->onIcon('heroicon-o-light-bulb')
+                                            ->offIcon('heroicon-s-light-bulb')
+
+                                    ]),
 
                             ]),
                     ])->columnSpanFull()

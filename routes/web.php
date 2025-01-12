@@ -15,7 +15,7 @@ Route::group(['middleware' => 'firewall.all'],function (){
     Route::group(['middleware' => 'localisation'], function () {
         include 'route.php';
     });
-    Route::get('maintenance',\App\Livewire\Maintenance::class)->name('maintenance');
+
 });
 
 

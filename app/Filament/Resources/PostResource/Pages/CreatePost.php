@@ -2,43 +2,49 @@
 
 namespace App\Filament\Resources\PostResource\Pages;
 
-use App\Filament\Resources\PostResource;
-use Filament\Actions;
+use Carbon\Carbon;
 use Filament\Resources\Pages\CreateRecord;
-use Illuminate\Database\Eloquent\Model;
-use Stichoza\GoogleTranslate\GoogleTranslate;
+use App\Events\BlogPublished;
+use App\Jobs\PostScheduleJob;
+use App\Filament\Resources\PostResource;
+use App\Filament\Resources\SeoDetailResource;
+use Filament\Actions;
 
 class CreatePost extends CreateRecord
 {
-    protected static string $resource = PostResource::class;
     use CreateRecord\Concerns\Translatable;
+    protected static string $resource = PostResource::class;
 
-    protected function handleRecordCreation(array $data): Model
+    //    protected function mutateFormDataBeforeCreate(array $data): array
+    //    {
+    //        dd($data);
+    //    }
+
+    protected function afterCreate()
     {
-        $translate=static::getModel()::create($data);
-        $translate['title'] = [
-            'en' => GoogleTranslate::trans($data['title'], 'en'),
-            'ar' => GoogleTranslate::trans($data['title'], 'ar'),
-        ];
-        $translate['info'] = [
-            'en' => GoogleTranslate::trans($data['info'], 'en'),
-            'ar' => GoogleTranslate::trans($data['info'], 'ar'),
-        ];
-        $translate['tags'] = [
-            'en' => GoogleTranslate::trans($data['tags'], 'en'),
-            'ar' => GoogleTranslate::trans($data['tags'], 'ar'),
-        ];
-        $translate['description'] = [
-            'en' => GoogleTranslate::trans($data['description'], 'en'),
-            'ar' => GoogleTranslate::trans($data['description'], 'ar'),
-        ];
-        $translate->save();
-        return $translate;
+        if ($this->record->isScheduled()) {
+
+            $now = Carbon::now();
+            $scheduledFor = Carbon::parse($this->record->scheduled_for);
+            PostScheduleJob::dispatch($this->record)
+                ->delay($now->diffInSeconds($scheduledFor));
+        }
+        if ($this->record->isStatusPublished()) {
+            $this->record->published_at = date('Y-m-d H:i:s');
+            $this->record->save();
+            event(new BlogPublished($this->record));
+        }
+    }
+
+    protected function getRedirectUrl(): string
+    {
+        return SeoDetailResource::getUrl('create', ['post_id' => $this->record->id]);
     }
     protected function getHeaderActions(): array
     {
         return [
             Actions\LocaleSwitcher::make(),
+            // ...
         ];
     }
 }
