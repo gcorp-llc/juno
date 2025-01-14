@@ -14,8 +14,8 @@ use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
 use FilamentTiptapEditor\TiptapEditor;
-use Firefly\FilamentBlog\Database\Factories\PostFactory;
-use Firefly\FilamentBlog\Enums\PostStatus;
+
+use App\Enums\PostStatus;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;

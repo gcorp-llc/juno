@@ -32,12 +32,12 @@ class Posts extends Component
         SEOTools::setDescription(__("Article Page Description"));
         SEOTools::setCanonical(URL::current());
         SEOTools::opengraph()->addProperty('type', 'articles');
-        if (app()->getLocale() == 'fa') $posts = Post::where('title->fa', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
-        if (app()->getLocale() == 'en') $posts = Post::where('title->en', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
-        if (app()->getLocale() == 'ar') $posts = Post::where('title->ar', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
-        if (empty($posts)) $posts = Post::where('title->fa', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
-        if (empty($posts)) $posts = Post::where('title->en', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
-        if (empty($posts)) $posts = Post::where('title->ar', 'like', '%' . $this->query . '%')->inRandomOrder()->select('title','sub_title','cover_photo_path')->paginate(77);
+        if (app()->getLocale() == 'fa') $posts = Post::where('title->fa', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
+        if (app()->getLocale() == 'en') $posts = Post::where('title->en', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
+        if (app()->getLocale() == 'ar') $posts = Post::where('title->ar', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
+        if (empty($posts)) $posts = Post::where('title->fa', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
+        if (empty($posts)) $posts = Post::where('title->en', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
+        if (empty($posts)) $posts = Post::where('title->ar', 'like', '%' . $this->query . '%')->inRandomOrder()->with('user')->paginate(77);
 
         return view('livewire.pages.posts')->with([
             'posts' => $posts

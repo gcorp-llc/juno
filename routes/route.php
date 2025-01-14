@@ -3,7 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 
 Route::get('/', \App\Livewire\Pages\Home::class)->name('home');
-Route::get('/posts', \App\Livewire\Pages\Posts::class)->name('posts');
+Route::get('/blogs', \App\Livewire\Pages\Posts::class)->name('posts');
 Route::get('/gallery', \App\Livewire\Pages\Gallery::class)->name('gallery');
 Route::get('/faq', \App\Livewire\Pages\Faq::class)->name('faq');
 Route::get('/contact_us', \App\Livewire\Pages\Contact::class)->name('contact_us');

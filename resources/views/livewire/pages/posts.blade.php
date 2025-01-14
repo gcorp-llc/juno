@@ -1,4 +1,38 @@
 <div>
+
+    <div class="container mx-auto px-4 py-6">
+        <article class="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+            <figure>
+                <img
+                    src="https://via.placeholder.com/600x400"
+                    alt="پوشش پست"
+                    class="rounded-t-lg"
+                />
+            </figure>
+            <div class="card-body">
+                <h1 class="card-title text-lg font-bold hover:text-primary transition-colors">
+                    <a href="/post-url">عنوان پست</a>
+                </h1>
+                <p class="text-gray-600">
+                    این یک توضیح کوتاه درباره پست است که توجه خواننده را جلب می‌کند.
+                </p>
+                <div class="flex items-center mt-4">
+                    <div class="avatar">
+                        <div class="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                            <img src="https://via.placeholder.com/40" alt="تصویر نویسنده" />
+                        </div>
+                    </div>
+                    <div class="ml-3">
+                        <p class="text-sm font-medium text-gray-800">نام نویسنده</p>
+                        <p class="text-xs text-gray-500">تاریخ انتشار: ۲۰۲۵/۰۱/۱۲</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+    </div>
+
+
+
     <section class="bg-white mt-3 py-8 antialiased md:py-16">
         <div class="mx-auto max-w-screen-xl px-4 2xl:px-0">
             <h2 class="text-xl font-semibold text-gray-900  sm:text-2xl">{{__("Posts")}}</h2>
@@ -62,46 +96,61 @@
                     <div class="" wire:loading.remove wire:target="search">
                         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                             @foreach($posts as $item)
+                                <div class="container mx-auto px-4 py-6">
+                                    <article class="card card-compact bg-base-100 shadow-xl hover:shadow-2xl transition-shadow duration-300">
+                                        <figure>
+                                            <img
+                                                src="{{Storage::url($item->cover_photo_path)}}"
+                                                alt="{{$item->photo_alt_text}}"
+                                                class="rounded-t-lg"
+                                            />
+                                        </figure>
+                                        <div class="card-body">
+                                            <h1 class="card-title text-lg font-bold hover:text-primary transition-colors">
+                                                <a href="/post-url">{{$item->title}}</a>
+                                            </h1>
+                                            <p class="text-gray-600">
+{{$item->sub_title}}
+                                            </p>
 
-                                <div
-                                    class="p-4 bg-white border border-gray-200 rounded-xl shadow dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-100  dark:hover:bg-gray-700 hover:shadow-lg">
-{{--                                    <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
-{{--                                        @if($item->cover_photo_path)--}}
-{{--                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
-{{--                                                <img class="rounded-t-lg"--}}
-{{--                                                     src="{{Storage::url($item->cover_photo_path)}}"--}}
-{{--                                                     alt="{{$item->title}}"/>--}}
+                                            <div class="flex justify-between mt-4">
+                                                <div class="flex  items-center">
+                                                    <div class="avatar">
+                                                        <div class="w-10 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                                                            <img src="{{Storage::url($item->user->profile_photo_path)}}" alt="{{$item->user->name}}" />
 
-{{--                                            </a>--}}
-{{--                                        @endif--}}
-{{--                                            <a href="{{route('article.show',str_replace(' ', '_', $item->title))}}">--}}
-{{--                                            <div class="">--}}
-{{--                                                <h5 class="mb-2  font-bold tracking-tight text-gray-900 dark:text-white">{{$item->title}}</h5>--}}
-{{--                                                <p class="my-3 text-justify font-normal text-gray-700 dark:text-gray-400">{{Str::limit($item->sub_title,190)}}</p>--}}
-{{--                                            </div>--}}
-{{--                                            </a>--}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="mx-3">
+                                                        <p class="text-sm font-medium text-gray-800">{{$item->user->name}}</p>
+                                                        <p class="text-xs text-gray-500">تاریخ انتشار: {{verta($item->created_at)->format('Y.m.d') }}</p>
+                                                    </div>
+                                                </div>
 
-
-
-{{--                                    </a>--}}
-
-                                    <ul class="flex flex-wrap mt-3  items-center text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
-                                                <li>
-                                                    <a href="{{'/fa/article/'.str_replace(' ','_',$item->getTranslation('title','fa'))}}" class="hover:underline me-4 md:me-6">
-                                                        فارسی
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{'/en/article/'.str_replace(' ','_',$item->getTranslation('title','en'))}}" class="hover:underline me-4 md:me-6">English</a>
-                                                </li>
-                                                <li>
-                                                    <a href="{{'/ar/article/'.str_replace(' ','_',$item->getTranslation('title','ar'))}}" class="hover:underline me-4 md:me-6">
-                                                        العربی
-                                                    </a>
-                                                </li>
-
-                                            </ul>
-
+                                                <div class="dropdown dropdown-top">
+                                                    <div tabindex="0" role="button" class="btn btn-ghost"><svg class="w-6 h-6 text-gray-700 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m13 19 3.5-9 3.5 9m-6.125-2h5.25M3 7h7m0 0h2m-2 0c0 1.63-.793 3.926-2.239 5.655M7.5 6.818V5m.261 7.655C6.79 13.82 5.521 14.725 4 15m3.761-2.345L5 10m2.761 2.655L10.2 15"/>
+                                                        </svg>
+                                                    </div>
+                                                    <ul tabindex="0" class="dropdown-content menu bg-base-100 rounded-box z-[1]  p-2 shadow">
+                                                        <li>
+                                                            <a href="{{'/fa/article/'.str_replace(' ','_',$item->getTranslation('title','fa'))}}" class="hover:underline me-4 md:me-6">
+                                                                فارسی
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{{'/en/article/'.str_replace(' ','_',$item->getTranslation('title','en'))}}" class="hover:underline me-4 md:me-6">English</a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="{{'/ar/article/'.str_replace(' ','_',$item->getTranslation('title','ar'))}}" class="hover:underline me-4 md:me-6">
+                                                                العربی
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
                                 </div>
                             @endforeach
 
