@@ -41,28 +41,52 @@ class ColleagueResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('address_id')
-                    ->required()
-                    ->numeric(),
-                Forms\Components\TextInput::make('name')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('avatar')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('info')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('experience')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('position')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('order')
-                    ->maxLength(255)
-                    ->default(null),
+                // Basic Information Section (Full Size)
+                Forms\Components\Section::make(__('Basic Information'))
+                    ->schema([
+                        Forms\Components\Select::make('address_id')
+                            ->relationship('address', 'title')
+                            ->required()
+                            ->label(__('Address')),
+
+                        Forms\Components\TextInput::make('name')
+                            ->required()
+                            ->maxLength(255)
+                            ->label(__('Name')),
+
+                        Forms\Components\FileUpload::make('avatar')
+                            ->image()
+                            ->label(__('Avatar')),
+                    ])
+                    ->columns(2), // Split into two columns
+
+                // Info Section (Full Width)
+                Forms\Components\Section::make(__('Details'))
+                    ->schema([
+                        Forms\Components\RichEditor::make('info')
+                            ->label(__('Information'))
+                            ->columnSpanFull(), // Full width
+                    ]),
+
+                // Other Details Section
+                Forms\Components\Section::make(__('Additional Information'))
+                    ->schema([
+                        Forms\Components\TextInput::make('experience')
+                            ->maxLength(255)
+                            ->label(__('Experience')),
+
+                        Forms\Components\TextInput::make('position')
+                            ->maxLength(255)
+                            ->label(__('Position')),
+
+                        Forms\Components\TextInput::make('order')
+                            ->numeric()
+                            ->required()
+                            ->label(__('Order')),
+                    ])
+                    ->columns(2), // Split into two columns
             ]);
+
     }
 
     public static function table(Table $table): Table

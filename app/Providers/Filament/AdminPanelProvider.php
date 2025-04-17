@@ -39,7 +39,7 @@ class AdminPanelProvider extends PanelProvider
                 'primary' => Color::Amber,
             ])
             ->plugins([
-
+                \Biostate\FilamentMenuBuilder\FilamentMenuBuilderPlugin::make(),
                 FilamentNordThemePlugin::make(),
                 \BezhanSalleh\FilamentShield\FilamentShieldPlugin::make(),
                 FilamentApexChartsPlugin::make(),

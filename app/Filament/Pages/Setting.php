@@ -19,9 +19,10 @@ use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Wizard;
 use Filament\Forms\Form;
 use Filament\Pages\SettingsPage;
-
+use BezhanSalleh\FilamentShield\Traits\HasPageShield;
 class Setting extends SettingsPage
 {
+    use HasPageShield;
     protected static ?string $navigationIcon = 'heroicon-o-cog-6-tooth';
     protected static ?int $navigationSort = 3;
 

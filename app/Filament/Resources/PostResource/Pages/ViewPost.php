@@ -37,7 +37,7 @@ class ViewPost extends ViewRecord
                 ->label('Preview')
                 ->requiresConfirmation()
                 ->icon('heroicon-o-eye')->url(function (Post $record) {
-                    return route('filamentblog.post.show', $record->slug);
+                    return route('blog.show', $record->slug);
                 }, true)
                 ->disabled(function (Post $record) {
                     return $record->isNotPublished();

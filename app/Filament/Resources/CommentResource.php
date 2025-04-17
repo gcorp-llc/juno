@@ -8,7 +8,7 @@ use Filament\Tables;
 use Filament\Tables\Actions\ActionGroup;
 use Filament\Tables\Table;
 use App\Models\Comment;
-use Firefly\FilamentBlog\Tables\Columns\UserPhotoName;
+use App\Tables\Columns\UserPhotoName;
 
 class CommentResource extends Resource
 {

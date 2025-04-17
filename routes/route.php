@@ -10,6 +10,10 @@ Route::get('/contact_us', \App\Livewire\Pages\Contact::class)->name('contact_us'
 Route::get('/about_us', \App\Livewire\Pages\About::class)->name('about_us');
 Route::get('/tune', \App\Livewire\Pages\Tune::class)->name('tune');
 
+Route::get('blog/{slug}',function (){
+    return "blog";
+})->name('blog.show');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

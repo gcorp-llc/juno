@@ -88,7 +88,7 @@ class PostResource extends Resource
             ])->defaultSort('id', 'desc')
             ->filters([
                 Tables\Filters\SelectFilter::make('user')
-                    ->relationship('user', config('filamentblog.user.columns.name'))
+                    ->relationship('user', 'name')
                     ->searchable()
                     ->preload()
                     ->multiple(),
@@ -154,8 +154,8 @@ class PostResource extends Resource
     public static function getRelations(): array
     {
         return [
-            //            \Firefly\FilamentBlog\Resources\PostResource\RelationManagers\SeoDetailRelationManager::class,
-            //            \Firefly\FilamentBlog\Resources\PostResource\RelationManagers\CommentsRelationManager::class,
+                     PostResource\RelationManagers\SeoDetailRelationManager::class,
+                    PostResource\RelationManagers\CommentsRelationManager::class,
         ];
     }
 

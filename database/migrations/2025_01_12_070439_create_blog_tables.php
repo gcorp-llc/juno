@@ -61,17 +61,7 @@ return new class () extends Migration {
             $table->timestamps();
         });
 
-        Schema::create( 'comments', function (Blueprint $table) {
-            $table->id();
-            $table->foreignId("user_id");
-            $table->foreignId("post_id")
-                ->constrained(table:  'posts')
-                ->cascadeOnDelete();
-            $table->text('comment');
-            $table->boolean('approved')->default(false);
-            $table->dateTime('approved_at')->nullable();
-            $table->timestamps();
-        });
+       
 
         Schema::create( 'news_letters', function (Blueprint $table) {
             $table->id();

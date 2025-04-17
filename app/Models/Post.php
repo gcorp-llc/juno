@@ -13,7 +13,7 @@ use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\ToggleButtons;
 use Filament\Forms\Get;
 use Filament\Forms\Set;
-use FilamentTiptapEditor\TiptapEditor;
+//use FilamentTiptapEditor\TiptapEditor;
 
 use App\Enums\PostStatus;
 use Illuminate\Database\Eloquent\Builder;

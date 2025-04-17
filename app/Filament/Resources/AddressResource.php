@@ -13,7 +13,16 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-
+use Filament\Forms\Components\{
+    Card,
+    FileUpload,
+    Grid,
+    Section,
+    TagsInput,
+    Textarea,
+    TextInput,
+    Toggle,
+};
 class AddressResource extends Resource
 {
     use Translatable;
@@ -42,81 +51,67 @@ class AddressResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('title')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('address')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\TextInput::make('cover')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('location')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('saturday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_saturday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_saturday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('sunday')
-                    ->required(),
-                Forms\Components\TextInput::make('star_sunday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_sunday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('monday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_monday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_monday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('tuesday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_tuesday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_tuesday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('wednesday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_wednesday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_wednesday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('thursday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_thursday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_thursday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Toggle::make('friday')
-                    ->required(),
-                Forms\Components\TextInput::make('start_friday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\TextInput::make('end_friday_time')
-                    ->maxLength(255)
-                    ->default(null),
-                Forms\Components\Textarea::make('phones')
-                    ->columnSpanFull(),
-                Forms\Components\TextInput::make('time_delay')
-                    ->required()
-                    ->maxLength(255)
-                    ->default(30),
+                Section::make(__('Basic Information'))
+                    ->schema([
+                        TextInput::make('title')
+                            ->label(__('Title'))
+                            ->required()
+                            ->maxLength(255),
+
+                        Textarea::make('address')
+                            ->label(__('Address'))
+                            ->required(),
+
+                        FileUpload::make('cover')
+                            ->label(__('Cover'))
+                            ->image(),
+
+                        TextInput::make('location')
+                            ->label(__('Location'))
+                            ->maxLength(255)
+                            ->nullable(),
+                    ]),
+
+                Section::make(__('Weekly Schedule'))
+                    ->schema([
+                        Grid::make(2) // ایجاد دو ستون اصلی
+                        ->schema(
+                            collect(['saturday', 'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday'])
+                                ->map(function ($day) {
+                                    return Card::make()
+                                        ->label(__($day . ' Schedule'))
+                                        ->schema([
+                                            Toggle::make($day)
+                                                ->label(__($day))
+                                                ->required(),
+                                            TextInput::make('start_' . $day . '_time')
+                                                ->label(__('Start Time'))
+                                                ->maxLength(255)
+                                                ->nullable(),
+                                            TextInput::make('end_' . $day . '_time')
+                                                ->label(__('End Time'))
+                                                ->maxLength(255)
+                                                ->nullable(),
+                                        ]);
+                                })
+                                ->toArray()
+                        ),
+                    ]),
+
+                Section::make(__('Additional Settings'))
+                    ->schema([
+                        TagsInput::make('phones')
+                            ->label(__('Phone Numbers'))
+                            ->placeholder(__('Add a phone number')),
+
+                        TextInput::make('time_delay')
+                            ->label(__('Time Delay (minutes)'))
+                            ->required()
+                            ->maxLength(255)
+                            ->default(30),
+                    ]),
             ]);
+
     }
 
     public static function table(Table $table): Table

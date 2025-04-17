@@ -1,0 +1,50 @@
+services:
+  # وب سرور Apache + PHP (آخرین نسخه)
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: juno_laravel
+    ports:
+      - "8080:80" # آدرس وب سایت روی localhost:8080 قابل دسترسی خواهد بود
+    environment:
+      SERVICE_NAME: app
+      SERVICE_TAGS: dev
+    volumes:
+      - .:/var/www/html
+    networks:
+      - juno-network
+
+  # پایگاه داده MariaDB
+  db:
+    image: mariadb:latest
+    container_name: juno_db
+    environment:
+      MYSQL_ROOT_PASSWORD: juno
+      MYSQL_DATABASE: juno_db
+      MYSQL_USER: juno
+      MYSQL_PASSWORD: juno
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - juno-network
+
+  # phpMyAdmin برای مدیریت پایگاه داده
+  phpmyadmin:
+    image: phpmyadmin:latest
+    container_name: juno_phpmyadmin
+    ports:
+      - "8081:80" # phpMyAdmin روی localhost:8081 قابل دسترسی خواهد بود
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: secret
+    depends_on:
+      - db
+    networks:
+      - juno-network
+
+volumes:
+  db_data:
+
+networks:
+  juno-network:
